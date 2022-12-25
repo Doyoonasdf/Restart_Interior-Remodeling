@@ -1,0 +1,332 @@
+#header_sub {
+	z-index: 10;
+	width: 100%;
+	height: 100px;
+	position: relative;
+	background: linear-gradient(
+		135deg,
+		rgba(235, 213, 69, 0.989),
+		#f4c663
+	);
+	margin-bottom: 100px;
+	.inner {
+		width: 1180px;
+		height: 100%;
+		position: relative;
+		margin: 0 auto;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		h1 {
+			a {
+				color: #444;
+				width: 100px;
+				font-size: 40px;
+			}
+		}
+		.menuWeb {
+			position: absolute;
+			height: 100%;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+
+			#gnb {
+				display: flex;
+				li {
+					a {
+						width: 100%;
+						height: 100%;
+						display: block;
+						// justify-content: center;
+						// align-items: center;
+						padding: 0px 20px;
+						font-weight: bold;
+						font-size: 20px;
+						line-height: 100px;
+						color: white;
+						opacity: 0.7;
+						text-align: center;
+						transition: 0.3s ease;
+						&:hover {
+							color: rgba(0, 0, 0, 0.747);
+						}
+					}
+				}
+			}
+			// 에프터선 그은 이유 : nav랑 다르게 보더바텀만 좀 연하게 해주고싶어서,, =>
+			// &::after {
+			// 	content: " ";
+			// 	display: block;
+			// 	width: 100%;
+			// 	left: 50%;
+			// 	top: 90%;
+			// 	transform: translate(-50%);
+			// 	height: 2px;
+			// 	// opacity: 0.5;
+			// 	position: absolute;
+			// 	background-color: black;
+			// }
+		}
+		.btnCall {
+			position: absolute;
+			right: 30px;
+			top: 50%;
+			transform: translateY(-50%);
+			display: none;
+			width: 30px;
+			height: 30px;
+			&::before {
+				content: "";
+				display: block;
+				width: 100%;
+				height: 2px;
+				background: #000;
+				position: absolute;
+				top: 0;
+				left: 0;
+				transition: top 0.5s 0s, transform 0.5s 0.5s;
+			}
+			&::after {
+				content: "";
+				display: block;
+				width: 100%;
+				height: 2px;
+				background: #000;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				transition: bottom 0.5s 0s, transform 0.5s 0.5s;
+			}
+			span {
+				display: block;
+				width: 100%;
+				height: 2px;
+				background: #000;
+				position: absolute;
+				top: 50%;
+				left: 0;
+				margin-top: -1px;
+				transition: 1s;
+				text-indent: -9999px;
+			}
+			&.on {
+				&::before {
+					top: 50%;
+					margin-top: -1px;
+					transform: rotate(45deg);
+				}
+				&::after {
+					bottom: 50%;
+					margin-bottom: -1px;
+					transform: rotate(-45deg);
+				}
+				span {
+					transform: translateX(100%);
+					opacity: 0;
+				}
+			}
+		}
+		.menuMo {
+			width: 270px;
+			height: 100vh;
+			letter-spacing: 1px;
+			background-color: rgba(235, 213, 69, 0.989);
+			position: fixed;
+			top: 0;
+			left: -270px;
+			padding: 35px 30px;
+			z-index: 10;
+			transition: 0.5s;
+			display: none;
+			&.on {
+				left: 0;
+			}
+			h1 {
+				padding-bottom: 30px;
+				border-bottom: 1px solid #666;
+				text-align: center;
+				letter-spacing: 1px;
+				a {
+					display: block;
+					font-weight: bold;
+					margin: 15px auto;
+					font-size: 40px;
+					line-height: 1px;
+					color: rgba(0, 0, 0, 0.747);
+					text-align: center;
+				}
+				span {
+					font-size: 12px;
+					color: #444;
+				}
+			}
+			#gnbMo {
+				li {
+					a {
+						display: block;
+						width: 100%;
+						padding: 30px 0;
+						font-weight: bold;
+						font-size: 20px;
+						line-height: 1px;
+						color: #efefef;
+						text-align: center;
+						&:hover {
+							color: #444;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.content {
+	width: 100%;
+	.inner {
+		width: 1180px;
+		margin: 0 auto;
+		min-height: 500px;
+		padding: 0px 0 150px;
+		h1 {
+			font-weight: bold;
+			font-size: 50px;
+			// line-height: 1px;
+			color: #000;
+			margin-bottom: 70px;
+			span {
+				// font-family: "맑은고딕";
+				font-family: "BlackHanSans";
+				font-weight: bold;
+				font-size: 20px;
+				line-height: 1px;
+				color: #aaa;
+				&::before {
+					content: "/";
+					font-weight: normal;
+					margin-right: 20px;
+					margin-left: 10px;
+				}
+			}
+		}
+	}
+}
+
+#footer_sub {
+	width: 100%;
+	padding: 80px 0;
+	background-color: #efefef;
+	opacity: 0.9;
+	.inner {
+		width: 1180px;
+		margin: 0 auto;
+		padding: 10px;
+		&::after {
+			content: "";
+			display: block;
+			clear: both;
+		}
+		h1 {
+			font-weight: bold;
+			font-size: 30px;
+			line-height: 1px;
+			color: rgba(0, 0, 0, 0.747);
+			float: left;
+			img {
+				filter: invert(86%) sepia(17%) saturate(1662%)
+					hue-rotate(37deg) brightness(10%) contrast(84%);
+				width: 100px;
+			}
+		}
+		ul {
+			float: right;
+			li {
+				float: left;
+				margin-left: 20px;
+				a {
+					// font: bold 14px/1 "arial";
+					font-size: 20px;
+					line-height: 1px;
+					font-weight: bold;
+					color: rgba(0, 0, 0, 0.747);
+					// color: rgba(235, 213, 69, 0.989);
+				}
+			}
+		}
+		address {
+			float: left;
+			width: 100%;
+			font: 14px/1.3 "arial";
+			color: rgba(0, 0, 0, 0.747);
+			margin-bottom: 20px;
+			margin-top: 20px;
+			padding-top: 20px;
+			border-top: 1px solid rgba(235, 213, 69, 0.989);
+		}
+		p {
+			float: left;
+			width: 100%;
+			font: 12px/1 "arial";
+			color: rgba(0, 0, 0, 0.747);
+		}
+	}
+}
+
+@media screen and (max-width: $tablet) {
+	#header_sub {
+		.inner {
+			width: 100%;
+			max-width: 1180px;
+			overflow: hidden;
+			padding: 0px 10px;
+			.menuWeb {
+				display: none;
+			}
+			.btnCall {
+				display: block;
+			}
+			.menuMo {
+				display: block;
+			}
+		}
+	}
+
+	.content {
+		.inner {
+			width: 100%;
+			max-width: 1180px;
+			overflow: hidden;
+			padding: 0px 10px;
+		}
+	}
+	#footer_sub {
+		padding: 80px 0;
+		.inner {
+			width: 100%;
+			max-width: 1180px;
+			overflow: hidden;
+			padding: 0px 10px;
+			display: block;
+			padding: 10px;
+		}
+	}
+}
+
+@media screen and (max-width: $mobile) {
+	#footer_sub {
+		.inner {
+			padding: 10px;
+			h1 {
+				margin-bottom: 20px;
+			}
+			ul {
+				width: 100%;
+				li {
+					margin-left: 0px;
+					margin: 5px;
+				}
+			}
+		}
+	}
+}

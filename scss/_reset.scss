@@ -1,0 +1,31 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	font-family: Ubuntu;
+}
+ul,
+ol,
+li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+fieldset {
+	border: none;
+}
+table {
+	border-collapse: collapse;
+}
+.h {
+	position: absolute;
+	top: -9999px;
+	opacity: 0;
+}
+
+.hidden {
+	position: absolute;
+	top: -99999999px;
+	opacity: 0;
+}

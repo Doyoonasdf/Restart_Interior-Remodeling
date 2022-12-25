@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>기업형 인테리어 리모델링 </title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://kit.fontawesome.com/c12878d3ba.js" crossorigin="anonymous"></script>
+  <script defer src="js/main.js"></script>
+  <script defer src="js/btnCall.js"></script>
+  <script defer src="js/anime.js"></script>
+  <script defer src="js/_mainActionform.js"></script>
+  <!-- <script defer src="js/Tab.js/"></script> -->
+</head>
+
+<body>
+
+  <ul class="Scroll">
+    <li class="on"><span>HOME</span><a href="#"></a></li>
+    <li><span>SERVICES</span><a href="#"></a></li>
+    <li><span>PROJECTS</span><a href="#"></a></li>
+  </ul>
+
+  <header id="header" class="scroll_view on">
+
+    <div class="inner">
+      <!-- 웹페이지 메뉴 -->
+      <h1>
+        <a href="index.html">SMK</a>
+      </h1>
+      <nav class="menuWeb">
+        <ul id="gnb">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="department.html">DEPARTMENT</a></li>
+          <li><a href="join.html">JOIN</a></li>
+          <li><a href="gallery.html">GALLERY</a></li>
+          <li><a href="community.html">COMMUNITY</a></li>
+          <li><a href="location.html">CONTACT</a></li>
+          <li><a href="youtube.html">YOUTUBE</a></li>
+        </ul>
+      </nav>
+
+      <a href="#" class="btnCall">
+        <span>메뉴호출</span>
+      </a>
+
+      <nav class="menuMo">
+        <h1>
+          <a href="index.html">SMK</a>
+          <span>INTERIOR DESIGN STUDIO</span>
+        </h1>
+        <ul id="gnbMo">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="department.html">DEPARTMENT</a></li>
+          <li><a href="join.html">JOIN</a></li>
+          <li><a href="gallery.html">GALLERY</a></li>
+          <li><a href="community.html">COMMUNITY</a></li>
+          <li><a href="location.html">CONTACT</a></li>
+          <li><a href="youtube.html">YOUTUBE</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <figure id="visual">
+    <article class="slider">
+      <div class="inner">
+        <h1>A BUILDER YOU CAN TRUST</h1>
+      </div>
+      <ul>
+        <li data-index="1"></li>
+        <li data-index="2"></li>
+        <li data-index="3"></li>
+      </ul>
+    </article>
+
+    <div class="Slide_btn">
+      <a href="#" class="prev">
+        <strong>PREV</strong>
+      </a>
+      <a href="#" class="next">
+        <strong>NEXT</strong>
+      </a>
+    </div>
+
+  </figure>
+
+  <!-- 짧은 액션폼 -->
+  <section id="information" class="action">
+    <div class="inner">
+      <div class="wrap">
+        <h1>ABOUT US</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis quisquam fugit maiores, sed
+          architectoLLorem ipsum dolor sit amet consectetur, adipisicing elit. Perferend
+          architectolor sit amet consectetur, adipisicing
+          architectolor sit amet consectetur, adipisicing elit. Perferendis quisquam fugit maiores, sed architecto
+          sequi officia iusto expedita cum </p>
+        <a href="department.html">MORE</a>
+      </div>
+      <div class="QiuckJoin">
+        <form action="result2.html" method="get" id="form">
+          <h1>ASK FOR INFORMATION</h1>
+          <fieldset>
+            <legend class="hidden">빠른 상담 신청</legend>
+            <table>
+              <caption class="hidden">정보 입력양식 테이블</caption>
+
+              <!-- 이름 -->
+              <tr>
+                <th scope="row"><label for="name">NAME</label></th>
+                <td>
+                  <input type="text" name="name" id="name">
+
+                </td>
+              </tr>
+              <!-- 번호 -->
+              <tr>
+                <th scope="row"><label for="tell">PhoneNumber</label></th>
+                <td>
+                  <select name="tell1" id="tell">
+                    <option value="010">010</option>
+                    <option value="070">070</option>
+                    <option value="032">032</option>
+                  </select>
+                  <span class="inputSpan">-</span>
+                  <input type="tel" name="tell" id="tellMiddle">
+                  <span class="inputSpan">-</span>
+                  <input type="tel" name="tell" id="tellEnd">
+                </td>
+              </tr>
+              <!-- 이메일 -->
+              <tr>
+                <th scope="row"><label for="email">E-MAIL</label></th>
+                <td>
+                  <input type="text" name="email" id="email" placeholder="이메일 주소를 입력해 주세요">
+
+                </td>
+              </tr>
+
+              <tr>
+                <th colspan="2">
+                  <input type="checkbox" name="agree" id="agree">
+                  <label for="agree">약관에 동의합니다</label>
+
+                  <input type="submit" value="SUBMIT">
+                </th>
+              </tr>
+            </table>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- //탭기능부여 -->
+  <section id="services" class="scroll_view">
+    <div class="innerH1">
+      <h1>OUR SERVICES</h1>
+    </div>
+    <div class="inner">
+      <div class="wrapUl">
+        <ul>
+          <li class="on"><a href="#">Living-room</a></li>
+          <li><a href="#">Kitchen</a></li>
+          <li><a href="#">Bed-Room</a></li>
+          <li><a href="#">Nursery-Room</a></li>
+          <li><a href="#">Bathroom</a></li>
+          <li><a href="#">Front door</a></li>
+        </ul>
+      </div>
+
+      <div class="wrapArc">
+        <article class="on">
+          <div class="pic">
+            <img src="img/index_services/index_services1.jpg" alt="거실인테리어사진">
+          </div>
+          <div class="txt">
+            <h2>Living-room</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis vitae necessitatibus at ducimus
+              ipsa
+              excepturi, odit ipsum fuga blanditiis! Consequuntur voluptatum omnistiis! Consequuntur voluptatum omnis
+              culpa dolorem laboriosam molestiae
+              excepum omnis cu
+              neque non optio eligendi?
+            </p>
+            <a href="#"> VIEW MORE</a>
+          </div>
+        </article>
+
+        <article>
+          <div class="pic">
+            <img src="img/index_services/index_services2.jpg " alt=주방인테리어사진">
+          </div>
+
+          <div class="txt">
+            <h2>Kitchen</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis vitae necessitatibus at ducimus
+              ipsa
+              excepturi, odit ipsum fuga blanditiis! Consequuntur voluptatum omnistiis! Consequuntur voluptatum omnis
+              culpa dolorem laboriosam molestiae
+              excepum omnis culpa dolorem laboriosam molestiae
+
+            </p>
+            <a href="#"> VIEW MORE</a>
+
+          </div>
+        </article>
+
+        <article>
+          <div class="pic">
+            <img src="img/index_services/index_services3.jpg " alt="침실인테리어사진">
+          </div>
+          <div class="txt">
+            <h2>Bed-Room</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis vitae necessitatibus at ducimus
+              ipsa
+              excepturi, odit ipsum fuga blanditiis! Consequuntur voluptatum omnis culpa dolorem laboriosam
+              molestiae
+              neque non optio eligendi?
+            </p>
+            <a href="#"> VIEW MORE</a>
+
+          </div>
+        </article>
+
+        <article>
+          <div class="pic">
+            <img src="img/index_services/index_services4.jpg " alt="아이방인테리어사진">
+          </div>
+          <div class="txt">
+            <h2>Nursery-Room</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis vitae necessitatibus at ducimus
+              ipsaatibus at ducimus
+              ipsaLorem ipsum dolor sit amet consectetur adipisicin
+              excepturi, odit ipsum fuga blanditiis! Consequuntur voluptatum omnis culpa dolorem laboriosam molestiae
+              neque non optio eligendi?
+            </p>
+            <a href="#"> VIEW MORE</a>
+
+          </div>
+        </article>
+
+        <article>
+          <div class="pic">
+            <img src="img/index_services/index_services5.jpg " alt="욕실인테리어사진">
+          </div>
+          <div class="txt">
+            <h2>Bathroom</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis vitae necessitatibus atatibus at
+              ducimus
+              ipsaLorem ipsum dolor sit amet consectetur adipisicinatibus at ducimus
+              ipsaLorem ipsum dolor sit amet consectetur adipisicin ducimus
+              ipsa
+              excepturi, odit ipsum fuga blanditiis! Consequuntur voluptatum
+            </p>
+            <a href="#"> VIEW MORE</a>
+
+          </div>
+        </article>
+
+        <article>
+          <div class="pic">
+            <img src="img/index_services/index_services6.jpg " alt="현관인테리어사진">
+
+          </div>
+
+          <div class="txt">
+            <h2>Front door</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis vitae necessitatibus at ducimus
+              ipsaLorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis vitae necessitatibus at ducimus
+              ipsaLorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis vitae necessitatibus at
+            </p>
+            <a href="#"> VIEW MORE</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section id="LatestProjects" class="scroll_view">
+    <div class="inner">
+      <h1>LATEST PROJECTS</h1>
+      <div class="wrap">
+        <article>
+          <img src="img/index_LatestProjects/Home - BDS Contract.jpg" alt="">
+          <a href="gallery.html">VIEW MORE</a>
+        </article>
+        <article>
+          <img src="img/index_LatestProjects/office interior design.png" alt="">
+          <a href="gallery.html">VIEW MORE</a>
+        </article>
+        <article>
+          <img src="img/index_LatestProjects/ofiso baldai.jpg" alt="">
+          <a href="gallery.html">VIEW MORE</a>
+
+        </article>
+        <article>
+          <img src="img/index_LatestProjects/플랜디자인.jpg" alt="">
+          <a href="#">VIEW MORE</a>
+
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 배너지움 -->
+
+  <footer id="footer">
+    <div class="inner">
+      <h1>SMK</h1>
+      <ul>
+        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fas fa-envelope"></i></a></li>
+      </ul>
+
+      <address>
+        Address : Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, nesciunt!
+        <br>TEL : +82-032-333-4444 FAX : +82-032-333-4434
+      </address>
+      <p>Copyright &copy; 2022 SMK ALL Right reserved</p>
+    </div>
+  </footer>
+
+
+
+</body>
+
+</html>
