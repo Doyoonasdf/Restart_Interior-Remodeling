@@ -13,7 +13,8 @@ btnSubmit.addEventListener('click', (e) => {
 
 	//핸드폰 (앞자리 중간자리 뒷자리)
 
-	if (!isNum('tell')) e.preventDefault();
+	if (!isNum('tellMiddle')) e.preventDefault();
+	if (!isNum('tellEnd')) e.preventDefault();
 	if (!isSelect('tell1')) e.preventDefault();
 });
 
@@ -23,7 +24,6 @@ function isTxt(el) {
 	let input = form.querySelector(`[name=${el}]`);
 	let txt = input.value;
 
-	// if (txt !== undefined) {  왜 언디파인드는 안될까
 	if (txt !== '') {
 		const errMsgs = input.closest('td').querySelectorAll('p');
 
