@@ -67,6 +67,7 @@ const next = visual.querySelector('.next');
 const lis = ul.querySelectorAll('li');
 let len = lis.length; //추가가되도 자동 li의 갯수를 세어줌
 let enableClick = true;
+// 탭메뉴에서 enableClick 따로 전역변수 처리안해줌 왜? 여기서해줬으니깐
 let speed = 1000;
 
 //초기화 함수를 호출
