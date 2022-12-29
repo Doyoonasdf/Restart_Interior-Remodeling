@@ -134,7 +134,6 @@ function prevSlide() {
 const services = document.querySelector('#services');
 const btns = services.querySelectorAll('ul li');
 const boxes = services.querySelectorAll('.wrapArc article');
-let enableClick = true;
 btns.forEach((_el, _ind) => {
 	_el.addEventListener('click', (e) => {
 		e.preventDefault();
@@ -142,12 +141,8 @@ btns.forEach((_el, _ind) => {
 		let isOn = e.currentTarget.classList.contains('on');
 		if (isOn) return;
 
-		if (enableClick) {
-			enableClick = false;
-
-			activation(btns, _ind);
-			activation(boxes, _ind);
-		}
+		activation(btns, _ind);
+		activation(boxes, _ind);
 	});
 });
 
@@ -156,9 +151,5 @@ function activation(list, index) {
 	for (let k of list) {
 		k.classList.remove('on');
 		list[index].classList.add('on');
-
-		setTimeout(() => {
-			enableClick = true;
-		}, speed);
 	}
 }
