@@ -1,4 +1,4 @@
-//__________________________________________
+//__________________________________________스크롤
 const scroll_view = document.querySelectorAll('.scroll_view');
 const Scroll_li = document.querySelectorAll('.Scroll li');
 const base = -window.innerHeight / 2;
