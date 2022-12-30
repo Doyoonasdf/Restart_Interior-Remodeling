@@ -1,23 +1,37 @@
 //__________________________________________
 const scroll_view = document.querySelectorAll('.scroll_view');
 const Scroll_li = document.querySelectorAll('.Scroll li');
-const base = -window.innerHeight / 3;
+const base = -window.innerHeight / 2;
+const scrollSpeed = 500;
 let posArr = [];
 
-for (let el of scroll_view) {
-	posArr.push(el.offsetTop);
-}
-
-//처음 브라우저 로딩시 세로 위치값 구함
 getPos();
 
-//브라우저 리사이즈 될때마다 세로 위치값 구함
 window.addEventListener('resize', getPos);
 
-window.addEventListener('scroll', () => {
-	let scroll = window.scrollY || window.pageYOffset;
+window.addEventListener('scroll', scrollActivation);
 
-	scroll_view.forEach((el, index) => {
+Scroll_li.forEach((btn, idx) => {
+	btn.addEventListener('click', (e) => {
+		const scroll = window.scrollY;
+		console.log(scroll);
+		const isOn = e.currentTarget.classList.contains('on');
+
+		if (isOn && scroll === posArr[idx]) return;
+		moveScroll(idx);
+	});
+});
+
+function getPos() {
+	posArr = [];
+	for (const box of scroll_view) posArr.push(box.offsetTop);
+	console.log(posArr);
+}
+
+function scrollActivation() {
+	const scroll = window.scrollY || window.pageYOffset;
+
+	scroll_view.forEach((_, index) => {
 		if (scroll >= posArr[index] + base) {
 			Scroll_li.forEach((el, index) => {
 				el.classList.remove('on');
@@ -28,35 +42,14 @@ window.addEventListener('scroll', () => {
 			scroll_view[index].classList.add('on');
 		}
 	});
+}
 
-	scroll_view.forEach((el, index) => {
-		if (scroll >= posArr[2]) {
-			for (let el of scroll_view) el.classList.remove('on');
-			scroll_view[index].classList.add('on');
-		}
+function moveScroll(index) {
+	new Anim(window, {
+		prop: 'scroll',
+		value: posArr[index],
+		duration: scrollSpeed,
 	});
-});
-
-//ul li를 클릭하면 해당 순번의 section으로 이동
-//이쪽은 클릭으로 스크롤을 이동시키는 쪽
-Scroll_li.forEach((el, index) => {
-	el.addEventListener('click', (e) => {
-		new Anim(window, {
-			prop: 'scroll',
-			value: posArr[index],
-			duration: 500,
-		});
-
-		for (let el of Scroll_li) el.classList.remove('on');
-		el.classList.add('on');
-	});
-});
-
-//각 박스의 세로 위치값 구하는 함수
-function getPos() {
-	posArr = [];
-	for (const box of scroll_view) posArr.push(box.offsetTop);
-	console.log(posArr);
 }
 // ________  슬라이더
 const visual = document.querySelector('#visual');

@@ -756,8 +756,7 @@ $mobile: 539px;
 	width: 100%;
 	padding: 150px 0px;
 	opacity: 1;
-	transform: rotateY(100deg) translateY(300px);
-	transition: 1s ease;
+
 	.inner {
 		width: 1180px;
 		margin: 0 auto;
@@ -784,7 +783,13 @@ $mobile: 539px;
 				margin-right: 20px;
 				position: relative;
 				overflow: hidden;
-
+				transform: rotateY(100deg) translateY(300px);
+				transition: 1s ease;
+				@for $i from 0 through 3 {
+					&:nth-of-type(#{$i + 1}) {
+						transition-delay: 0.1s * $i;
+					}
+				}
 				&:last-child {
 					margin-right: 0px;
 				}
@@ -835,8 +840,10 @@ $mobile: 539px;
 		}
 	}
 	&.on {
-		opacity: 1;
-		transform: rotateY(0deg) translateY(0px);
+		.wrap article {
+			opacity: 1;
+			transform: translateY(0px) rotateY(0deg);
+		}
 	}
 }
 
