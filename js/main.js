@@ -1,28 +1,31 @@
 //__________________________________________
 const scroll_view = document.querySelectorAll('.scroll_view');
 const Scroll_li = document.querySelectorAll('.Scroll li');
+const base = -window.innerHeight / 3;
 let posArr = [];
-const article = document.querySelector;
-const base = -800;
+
 for (let el of scroll_view) {
 	posArr.push(el.offsetTop);
 }
-console.log(posArr);
-//posArr = [0, 1000, 1700, 2600]
+
+//처음 브라우저 로딩시 세로 위치값 구함
+getPos();
+
+//브라우저 리사이즈 될때마다 세로 위치값 구함
+window.addEventListener('resize', getPos);
+
 window.addEventListener('scroll', () => {
 	let scroll = window.scrollY || window.pageYOffset;
 
 	scroll_view.forEach((el, index) => {
 		if (scroll >= posArr[index] + base) {
-			//모든 li, section을 비활성화
 			Scroll_li.forEach((el, index) => {
 				el.classList.remove('on');
 				scroll_view[index].classList.remove('on');
 			});
-			//해당 순번의 li와 section을 활성화
+
 			Scroll_li[index].classList.add('on');
 			scroll_view[index].classList.add('on');
-			// el.classList.add("on");
 		}
 	});
 
@@ -44,20 +47,17 @@ Scroll_li.forEach((el, index) => {
 			duration: 500,
 		});
 
-		// active(Scroll_li, index);
-		//모든 버튼을 반복을 돌면서 on을 제거하여 비활성화
 		for (let el of Scroll_li) el.classList.remove('on');
-		//클릭한 버튼만 on을 추가하여 활성화
 		el.classList.add('on');
-		// e.currentTarget.classList.add("on");
 	});
 });
 
-// function active(arr, index) {
-//   for (let el of arr) el.classList.remove("on");
-//   arr[index].classList.add("on");
-// }
-
+//각 박스의 세로 위치값 구하는 함수
+function getPos() {
+	posArr = [];
+	for (const box of scroll_view) posArr.push(box.offsetTop);
+	console.log(posArr);
+}
 // ________  슬라이더
 const visual = document.querySelector('#visual');
 const Slider = visual.querySelector('.slider');
