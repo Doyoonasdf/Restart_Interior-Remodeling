@@ -189,10 +189,10 @@ function isPwd2(el1, el2, len) {
 
 	if (
 		pwd1_val === pwd2_val &&
-		pwd1_val.length >= len &&
-		num.test(pwd1_val) &&
-		eng.test(pwd1_val) &&
-		spc.test(pwd1_val)
+		pwd2_val.length >= len &&
+		num.test(pwd2_val) &&
+		eng.test(pwd2_val) &&
+		spc.test(pwd2_val)
 	) {
 		const errMsgs = pwd2.closest('td').querySelectorAll('p');
 
