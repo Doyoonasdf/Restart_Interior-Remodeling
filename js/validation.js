@@ -12,6 +12,7 @@ btnSubmit.addEventListener('click', (e) => {
 	if (!isSelct('edu')) e.preventDefault();
 
 	if (!isPwd('pwd1', 'pwd2', 5)) e.preventDefault();
+	if (!isPwd2('pwd1', 'pwd2', 5)) e.preventDefault();
 });
 
 //1. userid 인증함수
@@ -172,6 +173,38 @@ function isPwd(el1, el2, len) {
 			`비밀번호는 ${len}글자 이상, 영문, 숫자, 특수문자를 포함하여 동일하게 입력하세요`
 		);
 		pwd1.closest('td').append(errMsg);
+		return false;
+	}
+}
+
+function isPwd2(el1, el2, len) {
+	let pwd1 = form.querySelector(`[name=${el1}]`);
+	let pwd2 = form.querySelector(`[name=${el2}]`);
+	let pwd1_val = pwd1.value;
+	let pwd2_val = pwd2.value;
+
+	const num = /[0-9]/;
+	const eng = /[a-zA-Z]/;
+	const spc = /[~!@#$%^&*()_+?><]/;
+
+	if (
+		pwd1_val === pwd2_val &&
+		pwd1_val.length >= len &&
+		num.test(pwd1_val) &&
+		eng.test(pwd1_val) &&
+		spc.test(pwd1_val)
+	) {
+		const errMsgs = pwd2.closest('td').querySelectorAll('p');
+
+		if (errMsgs.length > 0) pwd2.closest('td').querySelector('p').remove();
+		return true;
+	} else {
+		const errMsgs = pwd2.closest('td').querySelectorAll('p');
+
+		if (errMsgs.length > 0) return false;
+		const errMsg = document.createElement('p');
+		errMsg.append(`두개의 비밀번호를 동일하게 입력하세요`);
+		pwd2.closest('td').append(errMsg);
 		return false;
 	}
 }

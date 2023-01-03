@@ -5,14 +5,14 @@ $tablet: 1179px;
 $mobile: 539px;
 //모바일 320기준으로 맞춰서하고
 @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Ubuntu:wght@500&display=swap');
-@import 'sub_layout.scss';
+@import 'layout.scss';
 @import 'community.scss';
 @import 'department.scss';
 @import 'gallery.scss';
 @import 'join.scss';
 @import 'location.scss';
 @import 'reset.scss';
-@import 'sub_layout.scss';
+
 @import 'youtube.scss';
 @import 'result.scss';
 @import 'result2.scss';
