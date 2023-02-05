@@ -82,7 +82,8 @@ $mobile: 539px;
 			a {
 				color: #fff;
 				width: 100px;
-				font-size: 40px;
+				font-size: 35px;
+				margin-left: 20px;
 			}
 		}
 		.menuWeb {
@@ -103,7 +104,7 @@ $mobile: 539px;
 						// align-items: center;
 						padding: 0px 20px;
 						font-weight: bold;
-						font-size: 20px;
+						font-size: 15px;
 						line-height: 100px;
 						color: white;
 						opacity: 0.7;
@@ -235,7 +236,7 @@ $mobile: 539px;
 
 #visual {
 	width: 100%;
-	height: 80vh;
+	height: 60vh;
 	margin-top: -100px;
 	position: relative;
 	min-height: 650px;
@@ -255,7 +256,7 @@ $mobile: 539px;
 			z-index: 2;
 			h1 {
 				font-weight: bold;
-				font-size: 50px;
+				font-size: 40px;
 				line-height: 1px;
 				color: rgba(235, 213, 69, 0.989);
 				text-align: center;
@@ -320,7 +321,7 @@ $mobile: 539px;
 		left: 0;
 		.prev {
 			display: block;
-			width: 50px;
+			width: 40px;
 			height: 50px;
 			top: 50%;
 			transform: translateY(-50%);
@@ -387,7 +388,7 @@ $mobile: 539px;
 
 		.next {
 			display: block;
-			width: 50px;
+			width: 40px;
 			height: 50px;
 			transform: translateY(-50%);
 			top: 50%;
@@ -468,26 +469,25 @@ $mobile: 539px;
 			width: 50%;
 			height: 100%;
 			margin-right: 20px;
+			padding-left: 10px;
 			h1 {
-				margin: 70px 0px 40px;
+				margin: 40px 0px 40px;
 				text-align: left;
 				font-weight: bold;
-				font-size: 50px;
+				font-size: 40px;
 				line-height: 1px;
 				color: rgba(235, 213, 69, 0.989);
 			}
 			p {
 				font-weight: normal;
 				font-family: arial;
-				font-size: 20px;
+				font-size: 18px;
 				letter-spacing: 1.3px;
 			}
 			a {
 				display: block;
-				width: 150px;
+				width: 100px;
 				height: 40px;
-				border: 1px solid;
-
 				font-size: 15px;
 				line-height: 40px;
 				color: #fff;
@@ -508,7 +508,8 @@ $mobile: 539px;
 		margin-top: -81px;
 		border-radius: 0px;
 		min-width: 500px;
-		width: 50%;
+		width: 40%;
+		padding-right: 10px;
 		form {
 			h1 {
 				color: rgba(255, 255, 255, 0.735);
@@ -528,9 +529,9 @@ $mobile: 539px;
 
 					th {
 						width: 40%;
-						padding: 30px 30px;
+						padding: 25px 10px;
 						// font-weight: bold;
-						font-size: 20px;
+						font-size: 18px;
 						line-height: 1px;
 						// border-bottom: 1px solids rgba(235, 213, 69, 0.989);
 						color: #666;
@@ -563,7 +564,7 @@ $mobile: 539px;
 					}
 					td {
 						// border-bottom: 1px solid #bbb;
-						padding: 0px 30px;
+
 						background: white;
 
 						input[type='text'] {
@@ -576,14 +577,12 @@ $mobile: 539px;
 							background: none;
 							text-align: center;
 							font-weight: normal;
-							font-size: 16px;
 							line-height: 1px;
 						}
 						input[type='tel'],
 						#tell {
 							// width: calc(100% / 3);
-							width: 30%;
-							padding: 5px;
+							width: 25%;
 							font-size: 14px;
 						}
 						p {
@@ -622,7 +621,7 @@ $mobile: 539px;
 		margin: 0 auto;
 		h1 {
 			font-weight: bold;
-			font-size: 50px;
+			font-size: 40px;
 			color: #555;
 			text-align: center;
 			letter-spacing: 1px;
@@ -763,7 +762,7 @@ $mobile: 539px;
 		position: relative;
 		h1 {
 			font-weight: bold;
-			font-size: 50px;
+			font-size: 40px;
 			color: #555;
 			text-align: center;
 			letter-spacing: 1px;
@@ -850,7 +849,7 @@ $mobile: 539px;
 #footer {
 	width: 100%;
 	padding: 80px 0;
-	background-color: #efefef;
+	background-color: rgba(235, 213, 69, 0.989);
 	opacity: 0.9;
 	.inner {
 		width: 1180px;
@@ -885,6 +884,9 @@ $mobile: 539px;
 					font-weight: bold;
 					color: rgba(0, 0, 0, 0.747);
 					// color: rgba(235, 213, 69, 0.989);
+					&:hover {
+						color: #efefef;
+					}
 				}
 			}
 		}
@@ -897,7 +899,7 @@ $mobile: 539px;
 			margin-bottom: 20px;
 			margin-top: 20px;
 			padding-top: 20px;
-			border-top: 1px solid rgba(235, 213, 69, 0.989);
+			border-top: 1px solid rgba(0, 0, 0, 0.747);
 		}
 		p {
 			float: left;
@@ -1202,7 +1204,6 @@ $mobile: 539px;
 								width: 28%;
 								font-size: 10px;
 								padding: 0px;
-								margin-top: 15px;
 							}
 							p {
 								font-size: 10px;
