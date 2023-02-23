@@ -17,7 +17,7 @@
 			a {
 				color: #444;
 				width: 100px;
-				font-size: 40px;
+				font-size: 35px;
 				margin-left: 20px;
 			}
 		}
@@ -39,7 +39,7 @@
 						// align-items: center;
 						padding: 0px 20px;
 						font-weight: bold;
-						font-size: 20px;
+						font-size: 15px;
 						line-height: 100px;
 						color: white;
 						opacity: 0.7;
@@ -175,7 +175,7 @@
 		padding: 0px 0 150px;
 		h1 {
 			font-weight: bold;
-			font-size: 50px;
+			font-size: 45px;
 			// line-height: 1px;
 			color: #000;
 			margin-bottom: 70px;
@@ -183,7 +183,7 @@
 				// font-family: "맑은고딕";
 				font-family: 'BlackHanSans';
 				font-weight: bold;
-				font-size: 20px;
+				font-size: 17px;
 				line-height: 1px;
 				color: #aaa;
 				&::before {
@@ -227,7 +227,7 @@
 			float: right;
 			li {
 				float: left;
-				margin-left: 20px;
+				margin-left: 25px;
 				a {
 					// font: bold 14px/1 "arial";
 					font-size: 20px;
@@ -235,6 +235,9 @@
 					font-weight: bold;
 					color: rgba(0, 0, 0, 0.747);
 					// color: rgba(235, 213, 69, 0.989);
+					&:hover {
+						color: rgba(235, 213, 69, 0.989);
+					}
 				}
 			}
 		}
@@ -298,17 +301,26 @@
 }
 
 @media screen and (max-width: $mobile) {
+	.content {
+		.inner {
+			h1 {
+				font-size: 30px;
+				span {
+					font-size: 15px;
+				}
+			}
+		}
+	}
 	#footer_sub {
+		margin-top: 50px;
 		.inner {
 			padding: 10px;
 			h1 {
 				margin-bottom: 20px;
 			}
 			ul {
-				width: 100%;
 				li {
-					margin-left: 0px;
-					margin: 5px;
+					margin-left: 15px;
 				}
 			}
 		}

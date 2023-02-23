@@ -34,7 +34,7 @@ function isTxt(el, len) {
 		if (errMsgs.length > 0) return false;
 
 		const errMsg = document.createElement('p');
-		errMsg.append(`입력항목을 ${len}글자 이상 입력하세요`);
+		errMsg.append(`Enter ${len} or more characters.`);
 		input.closest('td').append(errMsg);
 		return false;
 	}
@@ -55,7 +55,7 @@ function isEmail(el) {
 
 		if (errMsgs.length > 0) return false;
 		const errMsg = document.createElement('p');
-		errMsg.append('@를 포함한 전체 이메일 주소를 입력하세요');
+		errMsg.append('Please include @ in your email');
 		input.closest('td').append(errMsg);
 		return false;
 	}
@@ -82,7 +82,7 @@ function isCheck(el) {
 		if (errMsgs.length > 0) return false;
 
 		const errMsg = document.createElement('p');
-		errMsg.append('필수 입력항목을 체크해주세요');
+		errMsg.append('Please check the required');
 		inputs[0].closest('td').append(errMsg);
 
 		return false;
@@ -109,7 +109,7 @@ function isAgree(el) {
 		if (errMsgs.length > 0) return false;
 
 		const errMsg = document.createElement('p');
-		errMsg.append('필수 입력항목을 체크해주세요');
+		errMsg.append('Please check the required');
 		inputs[0].closest('.agreement').append(errMsg);
 
 		return false;
@@ -134,7 +134,7 @@ function isSelct(el) {
 		if (errMsgs.length > 0) return false;
 
 		const errMsg = document.createElement('p');
-		errMsg.append('필수 입력항목을 선택해 주세요');
+		errMsg.append('Please select your final education');
 		sel.closest('td').append(errMsg);
 
 		return false;
@@ -170,7 +170,9 @@ function isPwd(el1, el2, len) {
 		if (errMsgs.length > 0) return false;
 		const errMsg = document.createElement('p');
 		errMsg.append(
-			`비밀번호는 ${len}글자 이상, 영문, 숫자, 특수문자를 포함하여 동일하게 입력하세요`
+			`
+			Password must contain at least  ${len} characters, including English, numeric, and special characters.
+			`
 		);
 		pwd1.closest('td').append(errMsg);
 		return false;
@@ -203,7 +205,7 @@ function isPwd2(el1, el2, len) {
 
 		if (errMsgs.length > 0) return false;
 		const errMsg = document.createElement('p');
-		errMsg.append(`두개의 비밀번호를 동일하게 입력하세요`);
+		errMsg.append(`Enter the same two passwords.`);
 		pwd2.closest('td').append(errMsg);
 		return false;
 	}

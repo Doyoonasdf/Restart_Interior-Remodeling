@@ -4,7 +4,7 @@
 			width: 100%;
 			h2 {
 				font-weight: bold;
-				font-size: 30px;
+				font-size: 25px;
 				color: #444;
 				margin: 0px 0px 50px;
 			}
@@ -31,7 +31,7 @@
 					font-size: 12px;
 					font-family: 'BlackHanSans';
 					font-weight: bold;
-					color: red;
+					color: rgba(235, 213, 69, 0.989);
 					margin-top: 5px;
 				}
 			}
@@ -41,6 +41,7 @@
 				border-bottom: 2px solid #999;
 				th,
 				td {
+					font-weight: 100;
 					border-bottom: 1px solid #ddd;
 					padding: 15px 25px;
 				}
@@ -51,9 +52,10 @@
 						width: 30%;
 						height: 40px;
 						margin: 10px;
+						border: none;
 						font-size: 14px;
 						line-height: 40px;
-						font-weight: bold;
+
 						color: #555;
 						cursor: pointer;
 						transition: 0.5s;
@@ -61,12 +63,13 @@
 						&:hover {
 							background-color: rgba(235, 213, 69, 0.989);
 							color: #fff;
-							border: 1px solid rgba(235, 213, 69, 0.989);
 						}
 					}
 				}
 				td {
-					border-left: 1px solid #aaa;
+					font-size: 15px;
+					color: #555;
+
 					input[type='text'],
 					input[type='password'],
 					select {
@@ -74,10 +77,15 @@
 						background: rgba(0, 0, 0, 0.03);
 						padding: 10px;
 						border: 1px solid #aaa;
+						color: #666;
 					}
 					input[type='radio'],
 					input[type='checkbox'] {
 						margin-right: 30px;
+						margin-top: 3px;
+						vertical-align: top;
+						width: 15px;
+						cursor: pointer;
 					}
 					textarea {
 						resize: none;
@@ -91,7 +99,7 @@
 						font-size: 12px;
 						font-family: 'BlackHanSans';
 						font-weight: bold;
-						color: red;
+						color: rgba(235, 213, 69, 0.989);
 						margin-top: 5px;
 					}
 				}
@@ -113,6 +121,7 @@
 					height: 100%;
 				}
 				table {
+					margin-bottom: 50px;
 					th {
 						width: 30%;
 					}
@@ -147,11 +156,23 @@
 	.join {
 		.inner {
 			.wrap {
+				h2 {
+					font-size: 20px;
+				}
 				table {
+					margin-bottom: 0px;
 					th {
-						width: 30%;
+						width: 20%;
+						padding: 15px 10px 15px 0px;
+						font-size: 15px;
+						input[type='reset'],
+						input[type='submit'] {
+							width: 40%;
+						}
 					}
 					td {
+						padding: 15px 0px;
+						text-align: center;
 						input[type='text'],
 						input[type='password'],
 						select {
@@ -162,7 +183,8 @@
 						}
 						input[type='radio'],
 						input[type='checkbox'] {
-							margin-right: 5px;
+							margin-right: 20px;
+							margin-bottom: 5px;
 						}
 						label {
 							font-size: 14px;

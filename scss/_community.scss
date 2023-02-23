@@ -8,17 +8,15 @@
 			&:nth-of-type(even) {
 				background: #eee;
 			}
-			&:hover {
-				font-weight: bold;
-			}
 			th {
-				padding: 15px;
-				background: rgba(235, 213, 69, 0.989);
-				color: #fff;
+				padding: 20px;
+				// background: rgba(235, 213, 69, 0.989);
+				// color: #fff;
+				border-bottom: 2px solid #888;
 				&:nth-of-type(1) {
 					width: 10%;
 				}
-				&:nth-of-type(3) {
+				&:nth-of-type(2) {
 					width: 15%;
 				}
 				&:nth-of-type(4) {
@@ -26,18 +24,30 @@
 				}
 			}
 			td {
-				padding: 13px;
+				padding: 20px;
 				border-bottom: 1px solid #ddd;
 				text-align: center;
+				font-family: arial;
+				cursor: pointer;
+
 				&:nth-of-type(2) {
-					text-align: left;
+					span {
+						color: #222;
+						font-size: 40px;
+					}
 				}
 				&:nth-of-type(3) {
-					font-family: "BlackHanSans";
+					font-family: 'BlackHanSans';
+					font-weight: 100;
+					&:hover a {
+						transition: 1s;
+						font-weight: bold;
+					}
 				}
 				a {
+					font-family: arial;
 					color: #333;
-					line-height: 1.4;
+					// line-height: 1.4;
 				}
 			}
 		}
@@ -46,7 +56,7 @@
 		width: 100%;
 		text-align: center;
 		&::after {
-			content: "";
+			content: '';
 			display: block;
 			clear: both;
 		}
@@ -57,7 +67,8 @@
 			height: 30px;
 			background: rgba(235, 213, 69, 0.989);
 			color: #eee;
-			font-size: 30px;
+			font-size: 20px;
+			line-height: 30px;
 			text-align: center;
 		}
 		.next {
@@ -67,7 +78,8 @@
 			height: 30px;
 			background: rgba(235, 213, 69, 0.989);
 			color: #eee;
-			font-size: 30px;
+			font-size: 20px;
+			line-height: 30px;
 			text-align: center;
 		}
 		.numbers {
@@ -79,7 +91,7 @@
 				width: 30px;
 				height: 30px;
 				border: 1px solid #888;
-				font: 11px/30px "arial";
+				font: 11px/30px 'arial';
 				color: #666;
 				margin: 0 5px;
 				transition: 0.5s;
@@ -102,8 +114,8 @@
 						&:nth-of-type(1) {
 							width: 13%;
 						}
-						&:nth-of-type(3) {
-							width: 20%;
+						&:nth-of-type(2) {
+							width: 15%;
 						}
 						&:nth-of-type(4) {
 							width: 0%;
@@ -144,7 +156,7 @@
 							width: 0%;
 							display: none;
 						}
-						&:nth-of-type(3) {
+						&:nth-of-type(2) {
 							width: 29%;
 						}
 					}

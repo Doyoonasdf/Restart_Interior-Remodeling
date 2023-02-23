@@ -1,7 +1,7 @@
 .department {
 	h2 {
 		font-weight: bold;
-		font-size: 30px;
+		font-size: 25px;
 		color: #444;
 		margin-bottom: 80px;
 	}
@@ -35,16 +35,16 @@
 			span {
 				width: 100%;
 				font-family: 'BlackHanSans';
-				font-size: 25px;
+				font-size: 20px;
 				padding-top: 10px;
 				b {
-					font-size: 30px;
+					font-size: 25px;
 				}
 			}
 			p {
 				font-family: 'BlackHanSans';
 				width: 100%;
-				font-size: 20px;
+				font-size: 18px;
 			}
 		}
 	}
@@ -60,7 +60,7 @@
 			width: 100%;
 			z-index: 3;
 			font-weight: bold;
-			font-size: 30px;
+			font-size: 25px;
 			color: #444;
 			display: inline;
 			margin: 0px;
@@ -94,7 +94,7 @@
 				padding: 50px 10px 10px;
 				h3 {
 					text-align: left;
-					transition: 1s;
+					transition: 0.5s;
 					margin-bottom: 20px;
 					color: white;
 					// color: black;
@@ -113,7 +113,7 @@
 				p {
 					transition: 1s;
 					font-family: 'BlackHanSans';
-					font-size: 20px;
+					font-size: 15px;
 					color: white;
 					// color: black;
 					font-weight: bold;
@@ -144,10 +144,9 @@
 				.txt {
 					position: relative;
 					z-index: 3;
-
 					h3 {
 						color: black;
-						font-size: 30px;
+						font-size: 25px;
 						&::after {
 							width: 120px;
 							background-color: #efefef;
@@ -155,8 +154,7 @@
 					}
 					p {
 						color: black;
-
-						font-size: 25px;
+						font-size: 20px;
 					}
 				}
 				.pic {
@@ -218,10 +216,11 @@
 	.department {
 		h2 {
 			text-align: left;
+			font-size: 20px;
 		}
 		.list {
 			li {
-				flex-direction: row-reverse;
+				flex-direction: row;
 				div {
 					width: 100%;
 				}
@@ -245,12 +244,13 @@
 			h2 {
 				left: 0%;
 				transform: translateX(0%);
+				font-size: 20px;
 			}
 			article {
 				width: 100%;
 
 				&::before {
-					height: 50%;
+					height: 100%;
 				}
 				.txt {
 					padding: 30px 10px 10px;
@@ -258,13 +258,16 @@
 				&:hover {
 					.txt {
 						h3 {
-							font-size: 20px;
+							font-size: 23px;
+							transition: 1s;
 							&::after {
 								width: 60px;
 							}
 						}
 						p {
-							font-size: 15px;
+							text-align: left;
+							font-size: 20px;
+							transition: 1s;
 						}
 					}
 				}
