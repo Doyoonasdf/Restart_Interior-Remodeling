@@ -11,50 +11,64 @@
 			height: 700px;
 			overflow: hidden;
 			opacity: 0.7;
+
 			img {
 				width: 100%;
 				height: 100%;
 				object-fit: cover;
+				filter: blur(5px);
 			}
 		}
 		.txt {
 			width: 400px;
 			height: 500px;
-			padding: 130px 20px;
+			padding: 130px 40px;
 			position: absolute;
 			top: 50%;
-			right: 0px;
-			transform: translateY(-50%);
-			background: linear-gradient(
-				135deg,
-				rgba(235, 213, 69, 0.989),
-				#f1af22
-			);
+			left: 50%;
+			// background-color: rgba(249, 249, 242, 0.687);
+			background-color: rgba(248, 248, 231, 0.687);
+
+			transform: translate(-50%, -50%);
+			// background: linear-gradient(135deg, rgba(235, 213, 69, 0.989), #f1af22);
+			// background-color: rgba(235, 213, 69, 0.989);
+			border: 5px solid rgba(235, 213, 69, 0.989);
 			h2 {
-				font-size: 28px;
-				font-family: "BlackHanSans";
+				font-size: 25px;
+				font-family: 'BlackHanSans';
 				color: black;
+				margin-bottom: 30px;
 			}
 			p {
-				font-size: 20px;
-				padding-left: 5px;
+				font-size: 17px;
 				color: #222;
-				padding: 10px 0px;
+				padding: 10px;
+			}
+			span {
+				font-weight: 500;
+				padding: 0px 10px 0px 10px;
+				display: block;
+				font-size: 15px;
+				font-family: arial;
+				color: #444;
 			}
 			a {
 				display: block;
-				border: 1px solid #bbb;
-				background-color: #efefef;
-				width: 50%;
-				margin-left: 50%;
+				padding: 10px 0px;
+				border: 1px solid rgba(235, 213, 69, 0.989);
+				border-radius: 50px;
+				// background-color: #efefef;
+				width: 150px;
+				margin-top: 20%;
+				margin-left: 25%;
 				font-size: 15px;
 				text-align: center;
 				color: #222;
-				letter-spacing: 1px;
-				font-family: "BlackHanSans";
+				background-color: rgba(235, 213, 69, 0.989);
+
 				&:hover {
-					background: #fff;
-					color: #555;
+					background-color: #000;
+					color: #efefef;
 				}
 			}
 		}
@@ -81,7 +95,7 @@
 			}
 			.txt {
 				padding: 20px;
-				width: 300px;
+				width: 250px;
 				height: 300px;
 				h2 {
 					font-size: 20px;

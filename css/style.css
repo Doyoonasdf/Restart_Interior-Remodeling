@@ -1361,8 +1361,10 @@ table {
   height: 100%;
   object-fit: cover;
   transition: 0.7s;
+  filter: grayscale(1);
 }
 .vidList article .pic:hover img {
+  filter: brightness(1.1);
   transform: scale(1.2);
 }
 .vidList article .con {
@@ -1504,43 +1506,54 @@ table {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  filter: blur(5px);
 }
 .result .wrap .txt {
   width: 400px;
   height: 500px;
-  padding: 130px 20px;
+  padding: 130px 40px;
   position: absolute;
   top: 50%;
-  right: 0px;
-  transform: translateY(-50%);
-  background: linear-gradient(135deg, rgba(235, 213, 69, 0.989), #f1af22);
+  left: 50%;
+  background-color: rgba(248, 248, 231, 0.687);
+  transform: translate(-50%, -50%);
+  border: 5px solid rgba(235, 213, 69, 0.989);
 }
 .result .wrap .txt h2 {
-  font-size: 30px;
+  font-size: 25px;
   font-family: "BlackHanSans";
   color: black;
 }
 .result .wrap .txt p {
-  font-size: 20px;
-  padding-left: 5px;
+  font-size: 17px;
   color: #222;
-  padding: 10px 0px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.result .wrap .txt span {
+  font-weight: 500;
+  padding: 0px 10px 0px 10px;
+  display: block;
+  font-size: 15px;
+  font-family: arial;
+  color: #444;
 }
 .result .wrap .txt a {
   display: block;
-  border: 1px solid #bbb;
-  background-color: #efefef;
-  width: 50%;
-  margin-left: 50%;
+  padding: 10px 0px;
+  border: 1px solid rgba(235, 213, 69, 0.989);
+  border-radius: 50px;
+  width: 150px;
+  margin-top: 20%;
+  margin-left: 25%;
   font-size: 15px;
   text-align: center;
   color: #222;
-  letter-spacing: 1px;
-  font-family: "BlackHanSans";
+  background-color: rgba(235, 213, 69, 0.989);
 }
 .result .wrap .txt a:hover {
-  background: #fff;
-  color: #555;
+  background-color: #000;
+  color: #efefef;
 }
 
 @media screen and (max-width: 1179px) {
@@ -1571,6 +1584,7 @@ table {
   }
   .result .wrap .txt a {
     font-size: 10px;
+    margin-top: 10%;
   }
 }
 .result2 {
@@ -1593,43 +1607,54 @@ table {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  filter: blur(5px);
 }
 .result2 .wrap .txt {
   width: 400px;
   height: 500px;
-  padding: 130px 20px;
+  padding: 130px 40px;
   position: absolute;
   top: 50%;
-  right: 0px;
-  transform: translateY(-50%);
-  background: linear-gradient(135deg, rgba(235, 213, 69, 0.989), #f1af22);
+  left: 50%;
+  background-color: rgba(248, 248, 231, 0.687);
+  transform: translate(-50%, -50%);
+  border: 5px solid rgba(235, 213, 69, 0.989);
 }
 .result2 .wrap .txt h2 {
-  font-size: 28px;
+  font-size: 25px;
   font-family: "BlackHanSans";
   color: black;
+  margin-bottom: 30px;
 }
 .result2 .wrap .txt p {
-  font-size: 20px;
-  padding-left: 5px;
+  font-size: 17px;
   color: #222;
-  padding: 10px 0px;
+  padding: 10px;
+}
+.result2 .wrap .txt span {
+  font-weight: 500;
+  padding: 0px 10px 0px 10px;
+  display: block;
+  font-size: 15px;
+  font-family: arial;
+  color: #444;
 }
 .result2 .wrap .txt a {
   display: block;
-  border: 1px solid #bbb;
-  background-color: #efefef;
-  width: 50%;
-  margin-left: 50%;
+  padding: 10px 0px;
+  border: 1px solid rgba(235, 213, 69, 0.989);
+  border-radius: 50px;
+  width: 150px;
+  margin-top: 20%;
+  margin-left: 25%;
   font-size: 15px;
   text-align: center;
   color: #222;
-  letter-spacing: 1px;
-  font-family: "BlackHanSans";
+  background-color: rgba(235, 213, 69, 0.989);
 }
 .result2 .wrap .txt a:hover {
-  background: #fff;
-  color: #555;
+  background-color: #000;
+  color: #efefef;
 }
 
 @media screen and (max-width: 1179px) {
@@ -1649,7 +1674,7 @@ table {
   }
   .result2 .wrap .txt {
     padding: 20px;
-    width: 300px;
+    width: 250px;
     height: 300px;
   }
   .result2 .wrap .txt h2 {

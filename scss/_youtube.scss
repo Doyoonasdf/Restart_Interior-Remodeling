@@ -19,9 +19,11 @@
 				height: 100%;
 				object-fit: cover;
 				transition: 0.7s;
+				filter: grayscale(1);
 			}
 			&:hover {
 				img {
+					filter: brightness(1.1);
 					transform: scale(1.2);
 				}
 			}
