@@ -14,7 +14,7 @@
 		}
 		li {
 			float: left;
-			border-top: 1px solid #ddd;
+			border-top: 1px solid rgba(235, 213, 69, 0.989);
 			width: 30%;
 			margin-left: 10px;
 			padding: 10px;
@@ -28,7 +28,8 @@
 				text-align: center;
 			}
 			&.on {
-				border-top: 1px solid rgba(235, 213, 69, 0.989);
+				background-color: rgba(235, 213, 69, 0.989);
+
 				a {
 					color: #333;
 				}
@@ -53,10 +54,10 @@
 		li {
 			float: left;
 			margin-right: 20px;
-			border-top: 1px solid #ddd;
 			width: calc(50% - 20px);
 			padding: 10px;
-			border-bottom: 1px solid #ddd;
+			border-top: 1px solid rgba(235, 213, 69, 0.989);
+			border-bottom: 1px solid rgba(235, 213, 69, 0.989);
 			margin-bottom: 10px;
 
 			a {
@@ -69,8 +70,8 @@
 			}
 			&.on {
 				transition: 1s;
-				border-top: 1px solid rgba(235, 213, 69, 0.989);
-				border-bottom: 1px solid rgba(235, 213, 69, 0.989);
+
+				background-color: rgba(235, 213, 69, 0.989);
 				a {
 					color: #333;
 				}
